@@ -1,0 +1,26 @@
+{
+  "name": "coffeecartpw1712",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrainingJS-TS-Playwright/coffeeCartPW1712.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TrainingJS-TS-Playwright/coffeeCartPW1712/issues"
+  },
+  "homepage": "https://github.com/TrainingJS-TS-Playwright/coffeeCartPW1712#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3"
+  }
+}
