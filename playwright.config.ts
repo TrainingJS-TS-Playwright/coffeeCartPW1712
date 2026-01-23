@@ -35,6 +35,9 @@ export default defineConfig({
     viewport: { width: 1280, height: 720 },
     video: 'retain-on-failure',
     screenshot: 'only-on-failure',
+    launchOptions: {
+      slowMo: 500,
+    },
   },
 
   /* Configure projects for major browsers */
