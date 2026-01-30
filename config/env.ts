@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import path from 'path';
-dotenv.config({ path: path.resolve(__dirname, '../.env') });
+dotenv.config({ path: path.resolve(__dirname, '..','.env') });
 
 const BASE_CLIENT_URL = process.env.BASE_CLIENT_URL || 'http://localhost:3000';
 const HEADLESS_MODE = process.env.HEADLESS_MODE ? false : process.env.HEADLESS_MODE === 'true'; 
@@ -9,8 +9,8 @@ const RETRY_FAILED_TESTS = process.env.RETRY_FAILED_TESTS ? +process.env.RETRY_F
 
 
 export default {
-  BASE_CLIENT_URL,
-  HEADLESS_MODE,
+    BASE_CLIENT_URL,
+    HEADLESS_MODE,
     CI,
     RETRY_FAILED_TESTS,
 };

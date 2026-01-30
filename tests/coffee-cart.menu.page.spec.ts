@@ -1,20 +1,19 @@
-import { test, expect } from '@playwright/test';
-import { MenuPage } from '../page/MenuPage';
-const BASE_URL = 'https://coffee-cart.app/';
+import { test, expect } from '../fixtures/fixturePage';
 
 
 test.describe('Coffee Cart Menu Tests use Page Object Model', () => {
-  let menuPage: MenuPage;
+  // let menuPage: MenuPage;
 
-  test.beforeEach(async ({ page }) => {
-    await page.goto(BASE_URL);
-    menuPage = new MenuPage(page);
-  });
+  // test.beforeEach(async ({ page }) => {
+  //   await page.goto(BASE_URL);
+  //   menuPage = new MenuPage(page);
+  // });
 
-  test('has title coffe cart', async ({ page }) => {
+  test('has title coffe cart', async ({ menuPage }) => {
     // const menuPage = new MenuPage(page);
 
     // Expect a title "to contain" a substring.
+    await menuPage.navigate();
     let title = await menuPage.getTitle();
     await expect(title).toEqual('Coffee cart');
     let espressoCup = (await menuPage.getCupsLocator())[0];
@@ -32,10 +31,10 @@ test.describe('Coffee Cart Menu Tests use Page Object Model', () => {
 
 
 
-  test('coffee carts', async ({ page }) => {
+  test('coffee carts', async ({ menuPage }) => {
 
     // const menuPage = new MenuPage(page);
-
+    await menuPage.navigate();
     let title = await menuPage.getTitle();
     await expect(title).toEqual('Coffee cart');
     let cups = await menuPage.getCupsLocator(); 
